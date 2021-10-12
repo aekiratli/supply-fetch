@@ -16,6 +16,6 @@ app.get('/', async (req, res) => {
     res.send(test);
 });
 
-app.listen( () => {
-   console.log(`Server is up at ${port}`);
+app.listen(process.env.PORT || 5000 () => {
+   console.log(`Server is up`);
 });
