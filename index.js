@@ -8,7 +8,6 @@ let web3 = new Web3(
 
 const address = "0x091822f59d65a35bcdeb015135af37a7a8f1b3cd"
 const abi = require('./abi.json')
-const port = 5000
 app.get('/', async (req, res) => {
     
     const instance = new web3.eth.Contract(abi, address);
