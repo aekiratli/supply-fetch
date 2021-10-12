@@ -5,10 +5,9 @@ let web3 = new Web3(
     new Web3.providers.WebsocketProvider("wss://rinkeby.infura.io/ws/v3/5abfb0d0480e43049a0fce761328a78f")
   );
 
-const port = 3000;
 const address = "0x091822f59d65a35bcdeb015135af37a7a8f1b3cd"
 const abi = require('./abi.json')
-
+const port = 5000
 app.get('/', async (req, res) => {
     
     const instance = new web3.eth.Contract(abi, address);
@@ -17,4 +16,6 @@ app.get('/', async (req, res) => {
     res.send(test);
 });
 
-app.listen(() => {});
+app.listen( () => {
+   console.log(`Server is up at ${port}`);
+});
