@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const Web3 = require('web3')
+const port = 5000
 let web3 = new Web3(
     new Web3.providers.WebsocketProvider("wss://rinkeby.infura.io/ws/v3/5abfb0d0480e43049a0fce761328a78f")
   );
@@ -16,6 +17,6 @@ app.get('/', async (req, res) => {
     res.send(test);
 });
 
-app.listen(process.env.PORT() => {
-   console.log(`Server is up`);
+app.listen(port, function() {
+  console.log("Server started.......");
 });
