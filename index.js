@@ -11,9 +11,8 @@ const abi = require('./abi.json')
 app.get('/', async (req, res) => {
     
     const instance = new web3.eth.Contract(abi, address);
-    const test = await instance.methods.totalSupply().call()
-    console.log(test)
-    res.send(test);
+    const supply = await instance.methods.totalSupply().call()
+    res.send(supply);
 });
 
 app.listen(PORT, () => {
