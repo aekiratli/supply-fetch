@@ -6,7 +6,7 @@ let web3 = new Web3(
     new Web3.providers.WebsocketProvider("wss://rinkeby.infura.io/ws/v3/5abfb0d0480e43049a0fce761328a78f")
   );
 
-const address = "0x59a1a4663ffFA85f1086B7cf1a85f69b09040953"
+const address = "0x9D4807b3C0c2bAb92F47D27cE5DD6da2cDfD559e"
 const abi = require('./abi.json')
 app.get('/', async (req, res) => {
     
